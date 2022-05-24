@@ -7,7 +7,7 @@ var favicon = require('serve-favicon');
 app.use(favicon(__dirname + '/favicon.ico'));
 app.get('/', (req, res) => res.send(`welcome to windows 11's project website!<br/><br/>the table of contents page will be updated when a new project is added.<br/><a href="https://w11projects.tk/toc">Table of contents</a>`));
 app.get('/toc', (req, res) => res.send(`table of contents:<br/><br/><a href="https://w11projects.tk/credits">credits</a><br/><a href="https://w11projects.tk/error">error</a><br/><a href="https://w11projects.tk/toc">toc</a><br/><a href="https://w11projects.tk/pran">pran</a><br/><br/>projects:<br/><h3>none yet</h3>`));
-app.get('/pran', (req, res) => res.redirect('/to'));
+app.get('/pran', (req, res) => res.redirect('/error/404'));
 app.get('/credits', (req, res) => res.send(`<h1>Credits</h1>well i did this all by myself, but thanks to the <a href="https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw">Coding Train</a>, he inspired me to make an express app to make a website. His project, "Peek in Pi" will be made here since his video inspired me to make this website.`));
 app.get('/projects', (req, res) => res.send(`<h1>404 Not Found</h1>`));
 app.get('/error', (req, res) => res.send(`<h1>Error codes</h1>since im lazy, to access them all, do w11projects.tk/error/(errorcode)<br/><br/>207<br/>208<br/>226<br/>400<br/>401<br/>402<br/>403<br/>404<br/>405<br/>406<br/>407<br/>408<br/>409<br/>410<br/>411<br/>412<br/>413<br/>414<br/>415<br/>416<br/>417<br/>418<br/>421<br/>422`));
