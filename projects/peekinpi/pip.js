@@ -6,11 +6,11 @@ module.exports = (request, response) => {
     if (index-1 > 0) {
         response.send(`this digit (${search}) is found at ${index - 1}th digit of pi`);
     } else {
-      response.send(`not found in the first million digits`);
+        response.send(`not found in the first million digits`);
     }
 }
-const path = require('path');
 
+const path = require('path');
 const coolPath = path.join(__dirname, 'million.txt');
 const stream = fs.createReadStream(coolPath);
 //const stream = fs.createReadStream('./million.txt');
